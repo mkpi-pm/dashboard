@@ -2,6 +2,9 @@ import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
+{
+  /* Navbar initial state */
+}
 const initialState = {
   chat: false,
   cart: false,
