@@ -34,6 +34,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
+          {/* Settings button */}
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
@@ -46,7 +47,7 @@ const App = () => {
             </TooltipComponent>
           </div>
 
-          {/* Render the sidebar if menu is active */}
+          {/* Sidebar */}
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
@@ -57,7 +58,7 @@ const App = () => {
             </div>
           )}
 
-          {/* Render the navbar if menu is active */}
+          {/* Navbar */}
           <div
             className={`dark:bg-main-dark-bg  bg-main-bg min-h-screen w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
@@ -68,6 +69,7 @@ const App = () => {
             </div>
           </div>
 
+          {/* Routes */}
           <div>
             <Routes>
               {/* Dashboard */}
