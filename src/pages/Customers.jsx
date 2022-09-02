@@ -23,9 +23,12 @@ const Customers = () => {
       >
         {/* Columns */}
         <ColumnsDirective>
+          
+          {/* values */}
           {customersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
+          
         </ColumnsDirective>
 
         {/* Functionality */}
