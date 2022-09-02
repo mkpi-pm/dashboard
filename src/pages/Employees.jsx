@@ -6,8 +6,8 @@ import { Header } from "../components";
 
 const Employees = () => {
   return (
-    // background
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+    // CardBlank
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
 
       {/* Header */}
       <Header category="Page" title="Employees" />
