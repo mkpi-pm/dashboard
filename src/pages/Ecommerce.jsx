@@ -26,7 +26,7 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          {/* Earnings Download */}
+          {/* Earnings Download Button */}
           <div className="mt-6">
             <Button
               color="white"
@@ -41,11 +41,14 @@ const Ecommerce = () => {
 
         {/* Customers Products Sales Refunds */}
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+          
+          {/* content */}
           {earningData.map((item) => (
             <div key={item.title} className="bg-white dark:text-gray-200
                                              dark:bg-secondary-dark-bg md:w-56
                                              p-4 pt-9 rounded=2xl"
             >
+              {/* content icon */}
               <button
                 type="button"
                 style={{color: item.iconColor, backgroundColor: item.iconBg}}
@@ -53,17 +56,27 @@ const Ecommerce = () => {
               >
                 {item.icon}
               </button>
+              
               <p className="mt-3">
+
+                {/* content amount */}
                 <span className="text-lg font-semibold">
                   {item.amount}
                 </span>
+
+                {/* content percentage */}
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
               </p>
+
+              {/* content title */}
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
+
             </div>
+
           ))}
+          
         </div>
         
       </div>

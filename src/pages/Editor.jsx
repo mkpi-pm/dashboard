@@ -6,24 +6,24 @@ import { Header } from '../components';
 
 const Editor = () => {
   return (
-          // CardBlank
-          <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    // CardBlank
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
 
-            {/* Header */}
-            <Header category="App" title="Editor" />
+      {/* Header */}
+      <Header category="App" title="Editor" />
 
-            {/* RichTextEditorComponent & props*/}
-            <RichTextEditorComponent>
+      {/* RichTextEditorComponent & props*/}
+      <RichTextEditorComponent>
 
-              {/* ContentData */}
-              <EditorData />
+        {/* ContentData */}
+        <EditorData />
 
-              {/* Functionality */}
-              <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+        {/* Functionality */}
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
 
-            </RichTextEditorComponent>
+      </RichTextEditorComponent>
 
-          </div>
+    </div>
   )
 }
 

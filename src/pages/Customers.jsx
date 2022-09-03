@@ -12,7 +12,7 @@ const Customers = () => {
       {/* Header */}
       <Header category="Page" title="Customers" />
 
-      {/* Table */}
+      {/* Table & props*/}
       <GridComponent
         dataSource={customersData}
         allowPaging
@@ -35,6 +35,7 @@ const Customers = () => {
         <Inject services={[ Page, Selection, Edit, Toolbar, Sort, Filter ]} />
 
       </GridComponent>
+      
     </div>
   )
 }

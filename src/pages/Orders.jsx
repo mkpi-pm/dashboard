@@ -12,7 +12,7 @@ const Orders = () => {
       {/* Header */}
       <Header category="Page" title="Orders" />
 
-      {/* Table */}
+      {/* Table & props*/}
       <GridComponent
         id="gridcomp"
         dataSource={ordersData}
@@ -21,15 +21,19 @@ const Orders = () => {
       >
         {/* Columns */}
         <ColumnsDirective>
+
+          {/* values */}
           {ordersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
+
         </ColumnsDirective>
 
         {/* Functionality */}
         <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit ]} />
 
       </GridComponent>
+      
     </div>
   )
 }

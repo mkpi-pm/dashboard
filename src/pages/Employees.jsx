@@ -31,6 +31,7 @@ const Employees = () => {
         <Inject services={[ Page, Search, Toolbar ]} />
 
       </GridComponent>
+      
     </div>
   )
 }

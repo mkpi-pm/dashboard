@@ -6,29 +6,30 @@ import { Header } from '../components';
 
 const Kanban = () => {
   return (
-        // CardBlank
-        <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    // CardBlank
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
 
-          {/* Header */}
-          <Header category="App" title="Kanban" />
+      {/* Header */}
+      <Header category="App" title="Kanban" />
 
-          {/* KanbanComponent & props*/}
-          <KanbanComponent
-            id="kanban"
-            dataSource={kanbanData}
-            cardSettings={{ contentField: "Summary", headerField: "Id"}}
-            keyField="Status"
-          >
-            {/* columns */}
-            <ColumnsDirective>
+      {/* KanbanComponent & props*/}
+      <KanbanComponent
+        id="kanban"
+        dataSource={kanbanData}
+        cardSettings={{ contentField: "Summary", headerField: "Id"}}
+        keyField="Status"
+      >
+        {/* columns */}
+        <ColumnsDirective>
               
-              {/* values */}
-              {kanbanGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
+          {/* values */}
+          {kanbanGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
 
-            </ColumnsDirective>
+        </ColumnsDirective>
 
-          </KanbanComponent>
-        </div>
+      </KanbanComponent>
+      
+    </div>
   )
 }
 
