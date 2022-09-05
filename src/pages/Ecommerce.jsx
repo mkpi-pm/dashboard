@@ -7,7 +7,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-24">
       
       {/* Earnings Block */}
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
