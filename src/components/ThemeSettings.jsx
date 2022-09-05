@@ -25,9 +25,9 @@ const ThemeSettings = () => {
             {/* close button */}
             <button
               type="button"
-              onClick={() => {}}
               style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
               className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
+              onClick={() => setThemeSettings(false)}
             >
               <MdOutlineCancel />
             </button>
@@ -40,7 +40,7 @@ const ThemeSettings = () => {
             {/* theme options title */}
             <p className="font-semibold text-xl">Theme Options</p>
 
-            {/* theme options - light input */}
+            {/* theme options toggle - light input */}
             <div className="mt-4">
               <input
                 type="radio"
@@ -48,8 +48,8 @@ const ThemeSettings = () => {
                 name="theme"
                 value="Light"
                 className="cursor-pointer"
-                onChange={() => {}}
-                checked={true}
+                onChange={setMode}
+                checked={currentMode === "Light"}
                />
               
               {/* theme options light label */}
@@ -62,7 +62,7 @@ const ThemeSettings = () => {
 
             </div>
             
-            {/* theme options - dark input */}
+            {/* theme options toggle - dark input */}
             <div className="mt-4">
               <input
                 type="radio"
@@ -70,8 +70,8 @@ const ThemeSettings = () => {
                 name="theme"
                 value="Dark"
                 className="cursor-pointer"
-                onChange={() => {}}
-                checked={true}
+                onChange={setMode}
+                checked={currentMode === "Dark"}
                />
               
               {/* theme options dark label */}
@@ -106,16 +106,16 @@ const ThemeSettings = () => {
                     {/* content positions */}
                     <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
 
-                      {/* content shape & color */}
+                      {/* content shape & color toggle */}
                       <button
                         type="button"
-                        className="h-10 w-10 rounded-full cursor-pointer"
                         style={{ backgroundColor: item.color}}
-                        onClick={() => {}}
+                        className="h-10 w-10 rounded-full cursor-pointer"
+                        onClick={() => setColor(item.color)}
                       >
 
                         <BsCheck
-                          className={`ml-2 text-2xl text-white ${false ? "block" : "hidden"}`} />
+                          className={`ml-2 text-2xl text-white ${item.color === currentColor ? "block" : "hidden"}`} />
 
                       </button>
 
