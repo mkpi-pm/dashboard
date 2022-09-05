@@ -28,7 +28,8 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
+    useStateContext();
 
   return (
     <div>
@@ -39,7 +40,7 @@ const App = () => {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: currentColor, borderRadius: "50%" }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray "
                 onClick={() => setThemeSettings(true)}
               >
