@@ -68,8 +68,10 @@ const App = () => {
               <Navbar />
             </div>
 
-            {/* Routes */}
+            {/* Theme & Routes */}
             <div>
+              <ThemeSettings />
+
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />
