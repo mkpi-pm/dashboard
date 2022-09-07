@@ -6,29 +6,38 @@ class SparkLine extends React.PureComponent {
     const { id, height, width, color, data, type, currentColor } = this.props;
 
     return (
-      <SparklineComponent
-        id={id}
-        height={height}
-        width={width}
-        lineWidth={1}
-        valueType="Numeric"
-        fill={color}
-        border={{ color: currentColor, width: 2 }}
-        dataSource={data}
-        xName="x"
-        yName="yval"
-        type={type}
-        tooltipSettings={{
-          visible: true,
-          format: '${x} : data ${yval}',
-          trackLineSettings: {
-            visible: true
-          }
-        }}
-        markerSettings={{ visible: ["All"], size: 2.5, fill: currentColor }}
-      >
-        <Inject services={[SparklineTooltip]} />
-      </SparklineComponent>
+      
+      <div>
+
+        {/* SparklineComponent & props*/}
+        <SparklineComponent
+          id={id}
+          height={height}
+          width={width}
+          lineWidth={1}
+          valueType="Numeric"
+          fill={color}
+          border={{ color: currentColor, width: 2 }}
+          dataSource={data}
+          xName="x"
+          yName="yval"
+          type={type}
+          tooltipSettings={{
+            visible: true,
+            format: '${x} : data ${yval}',
+            trackLineSettings: {
+              visible: true
+            }
+          }}
+          markerSettings={{ visible: ["All"], size: 2.5, fill: currentColor }}
+        >
+          {/* Functionality */}
+          <Inject services={[SparklineTooltip]} />
+
+        </SparklineComponent>
+
+      </div>
+
     )
   }
 }

@@ -16,10 +16,10 @@ const ColorPicker = () => {
       {/* Header */}
       <Header category="App" title="ColorPicker" />
 
-      {/* content */}
+      {/* Content */}
       <div className="text-center">
 
-        {/* pen */}
+        {/* Pen */}
         <div id="preview" />
 
         {/* Palette & Picker Content*/}
@@ -66,6 +66,7 @@ const ColorPicker = () => {
       </div>
 
     </div>
+    
   )
 }
 

@@ -24,7 +24,7 @@ const Customers = () => {
         {/* Columns */}
         <ColumnsDirective>
           
-          {/* values */}
+          {/* Data */}
           {customersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
@@ -37,6 +37,7 @@ const Customers = () => {
       </GridComponent>
       
     </div>
+    
   )
 }
 

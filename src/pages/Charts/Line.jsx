@@ -16,6 +16,7 @@ const Line = () => {
           </div>
 
         </div>
+        
   )
 }
 

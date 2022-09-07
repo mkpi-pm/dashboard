@@ -19,10 +19,10 @@ const Kanban = () => {
         cardSettings={{ contentField: "Summary", headerField: "Id"}}
         keyField="Status"
       >
-        {/* columns */}
+        {/* Columns */}
         <ColumnsDirective>
               
-          {/* values */}
+          {/* Data */}
           {kanbanGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
 
         </ColumnsDirective>
@@ -30,6 +30,7 @@ const Kanban = () => {
       </KanbanComponent>
       
     </div>
+    
   )
 }
 

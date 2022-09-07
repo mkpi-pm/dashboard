@@ -24,6 +24,7 @@ const Editor = () => {
       </RichTextEditorComponent>
 
     </div>
+    
   )
 }
 

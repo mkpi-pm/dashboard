@@ -20,7 +20,7 @@ const Employees = () => {
         toolbar={["Search"]}
         with="auto"
       >
-        {/* Columns */}
+        {/* Data */}
         <ColumnsDirective>
           {employeesGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
@@ -33,6 +33,7 @@ const Employees = () => {
       </GridComponent>
       
     </div>
+    
   )
 }
 

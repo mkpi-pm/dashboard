@@ -14,6 +14,8 @@ const Bar = () => {
 
     {/* Header */}
     <Header category="Bar" title="Olympic medal count in Rio" />
+
+        {/* ChartComponent & props*/}
         <ChartComponent
           id="charts"
           height="420px"
@@ -24,13 +26,18 @@ const Bar = () => {
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
           legendSettings={{ background: 'white' }}
         >
+          {/* Functionality */}
           <Inject services={[ColumnSeries, DataLabel, Legend, Tooltip, Category]} />
+          
+          {/* Data */}
           <SeriesCollectionDirective>
             {barCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
           </SeriesCollectionDirective>
+
         </ChartComponent>
 
     </div>
+
   )
 }
 

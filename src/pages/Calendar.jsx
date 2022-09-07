@@ -26,6 +26,7 @@ const Calendar = () => {
       </ScheduleComponent>
       
     </div>
+    
   )
 }
 

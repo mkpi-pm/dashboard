@@ -22,7 +22,7 @@ const Orders = () => {
         {/* Columns */}
         <ColumnsDirective>
 
-          {/* values */}
+          {/* Data */}
           {ordersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
@@ -35,6 +35,7 @@ const Orders = () => {
       </GridComponent>
       
     </div>
+    
   )
 }
 

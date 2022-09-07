@@ -14,6 +14,8 @@ const Area = () => {
 
     {/* Header */}
     <Header category="Area" title="Inflation Rate in Percantage" />
+
+      {/* ChartComponent & props*/}
       <ChartComponent
         id="area-chart"
         height="420px"
@@ -23,12 +25,18 @@ const Area = () => {
         background={ currentMode === "Dark" ? "#33373E" : "#fff"}
         legendSettings={{ background: 'white' }}
       >
+        {/* Functionality */}
         <Inject services={[SplineAreaSeries, DateTime, Legend]} />
+        
+        {/* Data */}
         <SeriesCollectionDirective>
           {areaCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
         </SeriesCollectionDirective>
+
       </ChartComponent>
+
     </div>
+    
   )
 }
 
