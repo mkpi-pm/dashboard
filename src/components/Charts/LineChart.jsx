@@ -20,7 +20,8 @@ const LineChart = () => {
         chartArea={{ border: { width: 0 }}}
         tooltip={{ enable: true }}
         background={ currentMode === "Dark" ? "#33373E" : "#fff"}
-        legendSettings={{ background: 'white' }}
+        legendSettings={{ background: 'white', opacity: 0.5 }}
+        title="INFLATION RATE"
       >
         {/* Functionality */}
         <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
