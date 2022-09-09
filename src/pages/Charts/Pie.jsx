@@ -13,7 +13,7 @@ const Pie = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
     {/* Header */}
-    <Header category="Pie" title="Project Cost Breakdown" />
+    <Header category="Chart" title="Pie" />
 
         {/* AccumulationChartComponent & props*/}
         <AccumulationChartComponent
@@ -22,6 +22,7 @@ const Pie = () => {
           legendSettings={{
             visible: true,
             background: 'white',
+            opacity: 0.5,
             position: "Bottom",
           }}
           enableSmartLabels={true}
@@ -30,6 +31,7 @@ const Pie = () => {
           center={{ x: '50%', y: '50%' }}
           tooltip={{ enable: true }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
+          title="PROJECT COST BREAKDOWN"
         >
           {/* Functionality */}
           <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />
