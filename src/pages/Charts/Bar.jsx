@@ -13,7 +13,7 @@ const Bar = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
     {/* Header */}
-    <Header category="Bar" title="Olympic medal count in Rio" />
+    <Header category="Chart" title="Bar" />
 
         {/* ChartComponent & props*/}
         <ChartComponent
@@ -24,7 +24,8 @@ const Bar = () => {
           chartArea={{ border: { width: 0 }}}
           tooltip={{ enable: true }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
-          legendSettings={{ background: 'white' }}
+          legendSettings={{ background: 'white', opacity: 0.5 }}
+          title="OLYMPIC MEDAL COUNT IN RIO"
         >
           {/* Functionality */}
           <Inject services={[ColumnSeries, DataLabel, Legend, Tooltip, Category]} />
