@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, HiloSeries, Tooltip, DateTime, Zoom, Logarithmic, Crosshair } from '@syncfusion/ej2-react-charts';
+import React from "react";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, HiloSeries, Tooltip, DateTime, Zoom, Logarithmic, Crosshair, Legend } from '@syncfusion/ej2-react-charts';
 
 import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
@@ -36,9 +36,11 @@ const Financial = () => {
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
           tooltip={{ enable: true, shared: true }}
           crosshair={{ enable: true, lineType: 'Vertical', line: { width: 0 } }}
+          legendSettings={{ background: 'white', opacity: 0.5 }}
+          title="AAPL HISTORICAL"
         >
           {/* Functionality */}
-          <Inject services={[HiloSeries, Tooltip, DateTime, Logarithmic, Crosshair, Zoom]}/>
+          <Inject services={[HiloSeries, Tooltip, DateTime, Logarithmic, Crosshair, Zoom, Legend]}/>
           
           {/* Data */}
           <SeriesCollectionDirective>
