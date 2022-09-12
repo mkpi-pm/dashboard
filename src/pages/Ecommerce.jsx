@@ -1,6 +1,6 @@
 import React from 'react';
-import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
+
 import { Stacked, Pie, Button, SparkLine } from "../components";
 import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
 import { useStateContext } from '../contexts/ContextProvider';
@@ -16,7 +16,7 @@ const Ecommerce = () => {
 
         {/* Earnings Content */}
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg
-                       h-44 rounded-xl w-full lg:w-80 p-8 pl-4 pt-5 m-3 bg-hero-pattern
+                       h-44 rounded-xl w-full lg:w-80 p-8 pl-4 pt-4 m-3 bg-hero-pattern
                        bg-no-repeat bg-cover bg-center"
         >
 
@@ -46,11 +46,11 @@ const Ecommerce = () => {
           
           {/* content */}
           {earningData.map((item) => (
-            <div key={item.title} className="bg-white dark:text-gray-200
-                                             dark:bg-secondary-dark-bg md:w-56
-                                             p-4 pt-9 rounded=2xl"
+            <div 
+              key={item.title}
+              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
             >
-              {/* content icon */}
+              {/* content icons */}
               <button
                 type="button"
                 style={{color: item.iconColor, backgroundColor: item.iconBg}}
@@ -61,18 +61,19 @@ const Ecommerce = () => {
               
               <p className="mt-3">
 
-                {/* content amount */}
+                {/* content amounts */}
                 <span className="text-lg font-semibold">
                   {item.amount}
                 </span>
 
-                {/* content percentage */}
+                {/* content percentages */}
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
+                
               </p>
 
-              {/* content title */}
+              {/* content titles */}
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
 
             </div>
@@ -87,8 +88,7 @@ const Ecommerce = () => {
       <div className="flex gap-10 flex-wrap justify-center">
 
         {/* Revenue Content */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg
-                       m-3 p-4 rounded-2xl md:w-780"
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780"
         >
           {/* Revenue First Line */}
           <div className="flex justify-between">
@@ -98,7 +98,7 @@ const Ecommerce = () => {
             <div className="flex items-center gap-4">
 
               {/* Dot Expense */}
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
                 <span><GoPrimitiveDot /></span>
                 <span>Expense</span>
               </p>
