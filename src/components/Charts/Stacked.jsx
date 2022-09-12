@@ -18,10 +18,10 @@ const Stacked = ({ width, height }) => {
         id="charts"
         primaryXAxis={stackedPrimaryXAxis}
         primaryYAxis={stackedPrimaryYAxis}
-        chartArea={{ border: { width: 0 }}}
+        chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2}}
         tooltip={{ enable: true }}
-        background={ currentMode === "Dark" ? "#33373E" : "#fff"}
-        legendSettings={{ background: "white"}}
+        background={ currentMode === "Dark" ? "#33373E" : "#fff" }
+        legendSettings={{ background: "white", opacity: 0.5}}
       >
         {/* Functionality */}
         <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />

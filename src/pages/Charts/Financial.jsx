@@ -32,7 +32,7 @@ const Financial = () => {
           id='charts'
           primaryXAxis={FinancialPrimaryXAxis}
           primaryYAxis={FinancialPrimaryYAxis}
-          chartArea={{ border: { width: 0 } }}
+          chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2 }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
           tooltip={{ enable: true, shared: true }}
           crosshair={{ enable: true, lineType: 'Vertical', line: { width: 0 } }}

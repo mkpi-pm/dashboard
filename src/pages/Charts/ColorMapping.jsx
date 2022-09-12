@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, DataLabel, Tooltip, Legend, RangeColorSettingsDirective, RangeColorSettingDirective } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Tooltip, Legend, RangeColorSettingsDirective, RangeColorSettingDirective } from '@syncfusion/ej2-react-charts';
 
 import { colorMappingData, rangeColorMapping, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
@@ -22,7 +22,7 @@ const ColorMapping = () => {
           id='charts'
           primaryXAxis={ColorMappingPrimaryXAxis}
           primaryYAxis={ColorMappingPrimaryYAxis}
-          chartArea={{ border: { width: 0 } }}
+          chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2 }}
           background={currentMode === 'Dark' ? '#33373E' : '#fff'}
           legendSettings={{ mode: 'Range', background: 'white', opacity: 0.5 }}
           tooltip={{ enable: true }}
@@ -30,7 +30,7 @@ const ColorMapping = () => {
           title="USA CLIMATE - WEATHER BY MONTH"
         >
           {/* Functionality */}
-          <Inject services={[ColumnSeries, DataLabel, Tooltip, Category, Legend]}/> 
+          <Inject services={[ColumnSeries, Tooltip, Category, Legend]}/> 
 
           {/* Data */}
           <SeriesCollectionDirective>
@@ -45,8 +45,6 @@ const ColorMapping = () => {
               cornerRadius={{
                 topLeft: 10,
                 topRight: 10 }}
-              
-              marker={{ dataLabel: { visible: true, position: "Outer" } }}
             >
             </SeriesDirective>
 
