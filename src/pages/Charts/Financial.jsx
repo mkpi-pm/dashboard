@@ -3,7 +3,7 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Hil
 
 import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Header } from '../../components';
+import { ChartsHeader } from '../../components';
 
 const date1 = new Date('2017, 1, 1');
 
@@ -23,7 +23,7 @@ const Financial = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
       {/* Header */}
-      <Header category="Chart" title="Financial" />
+      <ChartsHeader category="Financial" title="AAPL Historical" />
 
       <div className="w-full">
 
@@ -37,7 +37,6 @@ const Financial = () => {
           tooltip={{ enable: true, shared: true }}
           crosshair={{ enable: true, lineType: 'Vertical', line: { width: 0 } }}
           legendSettings={{ background: 'white', opacity: 0.5 }}
-          title="AAPL HISTORICAL"
         >
           {/* Functionality */}
           <Inject services={[HiloSeries, Tooltip, DateTime, Logarithmic, Crosshair, Zoom, Legend]}/>

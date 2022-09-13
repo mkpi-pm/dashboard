@@ -3,7 +3,7 @@ import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, Accu
 
 import { PyramidData } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Header } from '../../components';
+import { ChartsHeader } from '../../components';
 
 const Pyramid = () => {
   const { currentMode } = useStateContext();
@@ -13,14 +13,13 @@ const Pyramid = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
       {/* Header */}
-      <Header category="Chart" title="Pyramid" />
+      <ChartsHeader category="Pyramid" title="Food Comparison Chart" />
 
       <div className="w-full">
 
         {/* AccumulationChartComponent & props*/}
         <AccumulationChartComponent
           id='pyramid-chart'
-          title='FOOD COMPARISON CHART'
           legendSettings={{
             background: 'white',
             opacity: 0.5,

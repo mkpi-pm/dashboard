@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, LineChart } from "../../components";
+import { ChartsHeader, LineChart } from "../../components";
 
 const Line = () => {
   return (
@@ -8,7 +8,7 @@ const Line = () => {
         <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
           {/* Header */}
-          <Header category="Chart" title="Line" />
+          <ChartsHeader category="Line" title="Inflation Rate" />
   
           {/* content */}
           <div className="text-w-full">

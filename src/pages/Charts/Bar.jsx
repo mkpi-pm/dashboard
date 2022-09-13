@@ -3,7 +3,7 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Leg
 
 import { barPrimaryXAxis, barPrimaryYAxis, barCustomSeries } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Header } from '../../components';
+import { ChartsHeader } from '../../components';
 
 const Bar = () => {
   const { currentMode } = useStateContext();
@@ -13,7 +13,7 @@ const Bar = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
     {/* Header */}
-    <Header category="Chart" title="Bar" />
+    <ChartsHeader category="Bar" title="Olympic Medal Count in Rio" />
 
         {/* ChartComponent & props*/}
         <ChartComponent
@@ -25,7 +25,6 @@ const Bar = () => {
           tooltip={{ enable: true }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
           legendSettings={{ background: 'white', opacity: 0.5 }}
-          title="OLYMPIC MEDAL COUNT IN RIO"
         >
           {/* Functionality */}
           <Inject services={[ColumnSeries, DataLabel, Legend, Tooltip, Category]} />

@@ -3,7 +3,7 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Dat
 
 import { areaCustomSeries, areaPrimaryXAxis, areaPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Header } from '../../components';
+import { ChartsHeader } from '../../components';
 
 const Area = () => {
   const { currentMode } = useStateContext();
@@ -13,7 +13,7 @@ const Area = () => {
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
     {/* Header */}
-    <Header category="Chart" title="Area" />
+    <ChartsHeader category="Area" title="Inflation Rate in percantage" />
 
       {/* ChartComponent & props*/}
       <ChartComponent
@@ -25,7 +25,6 @@ const Area = () => {
         background={ currentMode === "Dark" ? "#33373E" : "#fff"}
         legendSettings={{ background: 'white', opacity: 0.5 }}
         tooltip={{ enable: true }}
-        title="INFLATION RATE IN PERCANTAGE"
       >
         {/* Functionality */}
         <Inject services={[SplineAreaSeries, DateTime, Legend, Tooltip]} />
