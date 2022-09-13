@@ -40,7 +40,7 @@ const ColorMapping = () => {
               xName='x'
               yName='y'
               type='Column'
-              animation={{ enable: false }}
+              animation={{ enable: true }}
               cornerRadius={{
                 topLeft: 10,
                 topRight: 10 }}
