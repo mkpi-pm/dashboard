@@ -16,7 +16,7 @@ const ThemeSettings = () => {
 
         {/* settings card */}
         <div className="float-right h-screen dark:text-gray-200 bg-white
-                       dark:[#484B52] w-400">
+                       dark:bg-[#484B52] w-400">
 
           {/* settings title */}
           <div className="flex justify-between items-center p-4 ml-4">
