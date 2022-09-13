@@ -21,7 +21,6 @@ const LineChart = () => {
         tooltip={{ enable: true }}
         background={ currentMode === "Dark" ? "#33373E" : "#fff"}
         legendSettings={{ background: 'white', opacity: 0.5 }}
-        title="INFLATION RATE"
       >
         {/* Functionality */}
         <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
