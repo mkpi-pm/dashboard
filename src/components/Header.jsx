@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Header = ({ category, title}) => {
-  return (
+const Header = ({ category, title }) => (
+  
     //CardBlank
     <div className="mb-10">
 
@@ -16,6 +16,5 @@ const Header = ({ category, title}) => {
     </div>
     
   )
-}
 
 export default Header;
