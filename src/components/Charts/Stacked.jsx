@@ -13,9 +13,10 @@ const Stacked = ({ width, height }) => {
 
       {/* ChartComponent & props */}
       <ChartComponent
+        id="charts"
+        animation={{ enable: true }}
         width={width}
         height={height}
-        id="charts"
         primaryXAxis={stackedPrimaryXAxis}
         primaryYAxis={stackedPrimaryYAxis}
         chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2}}
@@ -36,6 +37,7 @@ const Stacked = ({ width, height }) => {
     </div>
 
   )
+
 }
 
 export default Stacked;
