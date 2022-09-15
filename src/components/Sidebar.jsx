@@ -40,7 +40,7 @@ const Sidebar = () => {
               <SiShopware />
 
               {/* Sidebar Title */}
-              <span>Sample</span>
+              <span>Sample Sales</span>
 
             </Link>
 
