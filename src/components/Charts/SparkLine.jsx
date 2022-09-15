@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { SparklineComponent, Inject, SparklineTooltip } from "@syncfusion/ej2-react-charts";
 
 class SparkLine extends React.PureComponent {
@@ -6,10 +6,8 @@ class SparkLine extends React.PureComponent {
     const { id, height, width, color, data, type, currentColor } = this.props;
 
     return (
-      
-      <div>
 
-        {/* SparklineComponent & props*/}
+        // SparklineComponent & props
         <SparklineComponent
           id={id}
           height={height}
@@ -24,7 +22,7 @@ class SparkLine extends React.PureComponent {
           type={type}
           tooltipSettings={{
             visible: true,
-            format: '${x} : data ${yval}',
+            format: "${x} : data ${yval}",
             trackLineSettings: {
               visible: true
             }
@@ -36,10 +34,10 @@ class SparkLine extends React.PureComponent {
 
         </SparklineComponent>
 
-      </div>
-
     )
+
   }
+  
 }
 
 export default SparkLine;
