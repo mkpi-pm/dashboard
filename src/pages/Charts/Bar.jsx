@@ -1,9 +1,9 @@
-import React from 'react';
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries, DataLabel } from '@syncfusion/ej2-react-charts';
+import React from "react";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries, DataLabel } from "@syncfusion/ej2-react-charts";
 
-import { barPrimaryXAxis, barPrimaryYAxis, barCustomSeries } from '../../data/dummy';
-import { useStateContext } from '../../contexts/ContextProvider';
-import { ChartsHeader } from '../../components';
+import { barPrimaryXAxis, barPrimaryYAxis, barCustomSeries } from "../../data/dummy";
+import { useStateContext } from "../../contexts/ContextProvider";
+import { ChartsHeader } from "../../components";
 
 const Bar = () => {
   const { currentMode } = useStateContext();
@@ -12,19 +12,21 @@ const Bar = () => {
     // CardBlank
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
-    {/* Header */}
-    <ChartsHeader category="Bar" title="Olympic Medal Count in Rio" />
+      {/* Header */}
+      <ChartsHeader category="Bar" title="Olympic Medal Count in Rio" />
+
+      {/* Chart Card */}
+      <div className=" w-full">
 
         {/* ChartComponent & props*/}
         <ChartComponent
           id="charts"
-          height="420px"
           primaryXAxis={barPrimaryXAxis}
           primaryYAxis={barPrimaryYAxis}
           chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2 }}
           tooltip={{ enable: true }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
-          legendSettings={{ background: 'white', opacity: 0.5 }}
+          legendSettings={{ background: "white", opacity: 0.5 }}
         >
           {/* Functionality */}
           <Inject services={[ColumnSeries, DataLabel, Legend, Tooltip, Category]} />
@@ -36,9 +38,12 @@ const Bar = () => {
 
         </ChartComponent>
 
+      </div>
+
     </div>
 
   )
+
 }
 
 export default Bar;

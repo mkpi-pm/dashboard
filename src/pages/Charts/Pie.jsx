@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, PieSeries, AccumulationTooltip, AccumulationDataLabel } from '@syncfusion/ej2-react-charts';
 
-import { pieChartData } from '../../data/dummy';
-import { useStateContext } from '../../contexts/ContextProvider';
-import { ChartsHeader } from '../../components';
+import { pieChartData } from "../../data/dummy";
+import { useStateContext } from "../../contexts/ContextProvider";
+import { ChartsHeader } from "../../components";
 
 const Pie = () => {
   const { currentMode } = useStateContext();
@@ -12,8 +12,11 @@ const Pie = () => {
     // CardBlank
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
-    {/* Header */}
-    <ChartsHeader category="Pie" title="Project Cost Breakdown" />
+      {/* Header */}
+      <ChartsHeader category="Pie" title="Project Cost Breakdown" />
+
+      {/* Chart Card */}
+      <div className="w-full">
 
         {/* AccumulationChartComponent & props*/}
         <AccumulationChartComponent
@@ -21,14 +24,14 @@ const Pie = () => {
           height="420px"
           legendSettings={{
             visible: true,
-            background: 'white',
+            background: "white",
             opacity: 0.5,
             position: "Bottom",
           }}
           enableSmartLabels={true}
           enableAnimation={true}
           enableRotation={true}
-          center={{ x: '50%', y: '50%' }}
+          center={{ x: "50%", y: "50%" }}
           tooltip={{ enable: true }}
           background={ currentMode === "Dark" ? "#33373E" : "#fff"}
         >
@@ -37,33 +40,38 @@ const Pie = () => {
 
           {/* Data */}
           <AccumulationSeriesCollectionDirective>
+
             <AccumulationSeriesDirective
               dataSource={pieChartData}
-              name='Cost'
-              xName='x'
-              yName='y'
+              name="Cost"
+              xName="x"
+              yName="y"
               explode={true}
-              explodeOffset='20%'
+              explodeOffset="20%"
               explodeIndex={2}
               dataLabel={{
                 visible: true,
-                position: 'Inside',
-                name: 'text',
+                position: "Inside",
+                name: "text",
                 font: {
-                  fontWeight: '600',
-                  size: '17px',
-                  color: '#fff'
+                  fontWeight: "600",
+                  size: "17px",
+                  color: "#fff"
                 }
               }} 
-              radius='70%'>
+              radius="70%">
             </AccumulationSeriesDirective>
 
           </AccumulationSeriesCollectionDirective>
 
         </AccumulationChartComponent>
+        
+      </div>
 
     </div>
+
   )
+
 }
 
 export default Pie;
