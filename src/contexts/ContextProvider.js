@@ -2,9 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
-{
-  /* Navbar initial state */
-}
+// Navbar initial state
 const initialState = {
   chat: false,
   cart: false,
@@ -46,11 +44,14 @@ export const ContextProvider = ({ children }) => {
         screenSize,
         setScreenSize,
         currentColor,
+        setCurrentColor,
         currentMode,
+        setCurrentMode,
         themeSettings,
         setThemeSettings,
         setMode,
         setColor,
+        initialState,
       }}
     >
       {children}
