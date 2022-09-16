@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Stacked, Pie, Button, SparkLine } from "../components";
+import { Stacked, Doughnut, Button, SparkLine, LineChart } from "../components";
 import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
-import { useStateContext } from '../contexts/ContextProvider';
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, currentMode } = useStateContext();
 
   return (
+    // CardBlank
     <div className="mt-24">
       
       {/* Earnings Block */}
@@ -48,7 +49,7 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div 
               key={item.title}
-              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
             >
               {/* content icons */}
               <button
@@ -85,26 +86,26 @@ const Ecommerce = () => {
       </div>
 
       {/* Revenue Block */}
-      <div className="flex gap-10 flex-wrap justify-center">
+      <div className="flex gap-1 flex-wrap justify-center">
 
         {/* Revenue Content */}
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780"
         >
           {/* Revenue First Line */}
           <div className="flex justify-between">
-            <p className="font-semibold text-xl">Revenue Updates</p>
+            <p className="font-semibold text-xl text-gray-400">Revenue Updates</p>
 
-            {/* Dot Exp & Bud */}
+            {/* Dot Expense & Budget Card */}
             <div className="flex items-center gap-4">
 
               {/* Dot Expense */}
-              <p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-lg text-gray-400 hover:drop-shadow-xl">
                 <span><GoPrimitiveDot /></span>
                 <span>Expense</span>
               </p>
 
               {/* Dot Budget */}
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-lg text-green-400 hover:drop-shadow-xl">
                 <span><GoPrimitiveDot /></span>
                 <span>Budget</span>
               </p>
@@ -116,7 +117,7 @@ const Ecommerce = () => {
           {/* Revenue below the First Line */}
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
 
-            {/* Bud Exp Chart But */}
+            {/* Budget Expense Chart Button Card */}
             <div className="border-r-1 border-color m-4 pr-10">
 
               {/* Budget & Numbers */}
@@ -127,7 +128,7 @@ const Ecommerce = () => {
                                   rounded-full text-white bg-green-400 ml-3 text-xs"
                   >23%</span>
                 </p>
-                <p className="text-gray-500 mt-1">Budget</p>
+                <p className="text-gray-400 mt-1">Budget</p>
               </div>
 
               {/* Expense & Numbers */}
@@ -135,7 +136,7 @@ const Ecommerce = () => {
                 <p>
                   <span className="text-3xl font-semibold">$48,438</span>
                 </p>
-                <p className="text-gray-500 mt-1">Expense</p>
+                <p className="text-gray-400 mt-1">Expense</p>
               </div>
 
               {/* SparkLine chart */}
@@ -165,7 +166,76 @@ const Ecommerce = () => {
 
             {/* Stacked Component */}
             <div>
-              <Stacked width="320px" height="360px" />
+              <Stacked currentMode={currentMode} width="320px" height="360px" />
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Monthly Revenue & Yearly Sales Block */}
+        <div>
+
+          {/* Monthly Revenue Card */}
+          <div
+            className=" rounded-2xl md:w-400 p-4 m-3"
+            style={{ backgroundColor: currentColor }}
+          >
+            {/* Earnings / Number / Monthly Revenue line */}
+            <div className="flex justify-between items-center ">
+
+              {/* Earnings */}
+              <p className="font-semibold text-gray-200 text-2xl">Earnings</p>
+
+              <div>
+                {/* Number */}
+                <p className="text-2xl text-white font-semibold mt-8">$63,448.78</p>
+
+                {/* Monthly Revenue */}
+                <p className="text-gray-200">Monthly revenue</p>
+
+              </div>
+
+            </div>
+
+            {/* Chart */}
+            <div className="mt-4">
+
+              {/* SparkLine Component & props */}
+              <SparkLine
+                currentColor={currentColor}
+                id="column-sparkLine"
+                height="100px"
+                width="320"
+                type="Column"
+                data={SparklineAreaData}
+                color="rgb(242, 252, 253)"
+               />
+
+            </div>
+
+          </div>
+
+          {/* Yearly Sales Card */}
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+
+            {/* Number & Text */}
+            <div>
+              <p className="text-2xl font-semibold ">$43,246</p>
+              <p className="mt-1 font-semibold text-md text-gray-400">Yearly Sales</p>
+            </div>
+
+            {/* Chart */}
+            <div className="w-40">
+
+              {/* Doughnut Component % props */}
+              <Doughnut
+                id="pie-chart"
+                data={ecomPieChartData}
+                legendVisiblity={false}
+                height="170px"
+               />
+
             </div>
 
           </div>
@@ -175,7 +245,9 @@ const Ecommerce = () => {
       </div>
 
     </div>
+
   )
+
 }
 
 export default Ecommerce;
