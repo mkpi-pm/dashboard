@@ -1,31 +1,30 @@
-import React from 'react';
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import React from "react";
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from "@syncfusion/ej2-react-richtexteditor";
 
-import { EditorData } from '../data/dummy';
-import { Header } from '../components';
+import { EditorData } from "../data/dummy";
+import { Header } from "../components";
 
-const Editor = () => {
-  return (
-    // CardBlank
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+const Editor = () => (
 
-      {/* Header */}
-      <Header category="App" title="Editor" />
+  // CardBlank
+  <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
-      {/* RichTextEditorComponent & props*/}
-      <RichTextEditorComponent>
+    {/* Header */}
+    <Header category="App" title="Editor" />
 
-        {/* ContentData */}
-        <EditorData />
+    {/* RichTextEditorComponent & props*/}
+    <RichTextEditorComponent>
 
-        {/* Functionality */}
-        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+      {/* Data */}
+      <EditorData />
 
-      </RichTextEditorComponent>
+      {/* Functionality */}
+      <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
 
-    </div>
-    
-  )
-}
+    </RichTextEditorComponent>
+
+  </div>
+
+)
 
 export default Editor;

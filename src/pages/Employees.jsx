@@ -1,40 +1,39 @@
-import React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Inject, Toolbar } from "@syncfusion/ej2-react-grids";
+import React from "react";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Edit, Inject, Toolbar } from "@syncfusion/ej2-react-grids";
 
 import { employeesData, employeesGrid } from "../data/dummy";
 import { Header } from "../components";
 
-const Employees = () => {
-  return (
-    // CardBlank
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+const Employees = () => (
 
-      {/* Header */}
-      <Header category="Page" title="Employees" />
+  // CardBlank
+  <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
 
-      {/* Table */}
-      <GridComponent
-        dataSource={employeesData}
-        allowPaging
-        allowSorting
-        toolbar={["Search"]}
-        with="auto"
-      >
-        {/* Data */}
-        <ColumnsDirective>
-          {employeesGrid.map((item, index) => (
-            <ColumnDirective key={index} {...item} />
-          ))}
-        </ColumnsDirective>
+    {/* Header */}
+    <Header category="Page" title="Employees" />
 
-        {/* Functionality */}
-        <Inject services={[ Page, Search, Toolbar ]} />
+    {/* Table */}
+    <GridComponent
+      dataSource={employeesData}
+      allowPaging
+      allowSorting
+      toolbar={["Search"]}
+      pageSettings={{ pageCount: 5 }}
+      editSettings={{ allowingDeleting: true, allowingEditing: true }}
+      width="auto"
+    >
+      {/* Data */}
+      <ColumnsDirective>
+        {employeesGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
+      </ColumnsDirective>
 
-      </GridComponent>
+      {/* Functionality */}
+      <Inject services={[ Page, Search, Edit, Toolbar ]} />
+
+    </GridComponent>
       
-    </div>
-    
-  )
-}
+  </div>
+
+)
 
 export default Employees;
