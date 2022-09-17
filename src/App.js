@@ -33,21 +33,33 @@ const App = () => {
     themeSettings,
     setThemeSettings,
     currentColor,
+    setCurrentColor,
     currentMode,
+    setCurrentMode,
   } = useStateContext();
+
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem("colorMode");
+    const currentThemeMode = localStorage.getItem("themeMode");
+    if (currentThemeColor && currentThemeMode) {
+      setCurrentColor(currentThemeColor);
+      setCurrentMode(currentThemeMode);
+    }
+  }, []);
 
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
+        {/* Full Page Card */}
         <div className="flex relative dark:bg-main-dark-bg">
           {/* Settings button */}
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
+                onClick={() => setThemeSettings(true)}
                 style={{ background: currentColor, borderRadius: "50%" }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray "
-                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -65,12 +77,13 @@ const App = () => {
             </div>
           )}
 
-          {/* Navbar */}
+          {/* Full Page - Sidebar = Navbar.width */}
           <div
             className={`dark:bg-main-dark-bg  bg-main-bg min-h-screen w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
+            {/* Navbar */}
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
@@ -107,6 +120,8 @@ const App = () => {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
