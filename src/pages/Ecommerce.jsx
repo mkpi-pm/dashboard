@@ -89,7 +89,7 @@ const Ecommerce = () => {
       <div className="flex gap-1 flex-wrap justify-center">
 
         {/* Revenue Content */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780"
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-800"
         >
           {/* Revenue First Line */}
           <div className="flex justify-between">
