@@ -14,7 +14,7 @@ const Cart = () => {
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0">
 
       {/* Shopping Cart card */}
-      <div className="float-right h-screen duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484B52] bg-white md:w-400 p-8">
+      <div className="float-right h-screen duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#42464D] bg-white md:w-400 p-8">
 
         {/* Header */}
         <div className="flex justify-between items-center">
