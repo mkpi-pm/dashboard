@@ -16,7 +16,7 @@ const Kanban = () => (
     <KanbanComponent
       id="kanban"
       dataSource={kanbanData}
-      cardSettings={{ contentField: "Summary", headerField: "Id"}}
+      cardSettings={{ contentField: "Summary", headerField: "Id", tagsField: 'Tags', grabberField: 'Color', footerCssField: 'ClassName'}}
       keyField="Status"
     >
       {/* Columns */}
