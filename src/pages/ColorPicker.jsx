@@ -28,7 +28,7 @@ const ColorPicker = () => (
         <div>
 
           {/* Palette Header */}
-          <p className="text-2xl text-gray-500 font-semibold mt-2 mb-4">Inline Palette</p>
+          <p className="text-2xl dark:text-gray-400 font-semibold mt-2 mb-4">Inline Palette</p>
 
           {/* ColorPickerComponent & props*/}
           <ColorPickerComponent
@@ -46,7 +46,7 @@ const ColorPicker = () => (
         <div>
 
           {/* Picker Header */}
-          <p className="text-2xl text-gray-500 font-semibold mt-2 mb-4">Inline Picker</p>
+          <p className="text-2xl dark:text-gray-400 font-semibold mt-2 mb-4">Inline Picker</p>
 
           {/* ColorPickerComponent & props*/}
           <ColorPickerComponent
