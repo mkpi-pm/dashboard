@@ -166,7 +166,11 @@ const Ecommerce = () => {
 
             {/* Stacked Component */}
             <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
+              <Stacked
+                currentMode={currentMode}
+                width="320px"
+                height="360px"
+               />
             </div>
 
           </div>

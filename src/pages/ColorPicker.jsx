@@ -19,7 +19,7 @@ const ColorPicker = () => (
     <div className="text-center">
 
       {/* Pen */}
-      <div id="preview"/>
+      <div id="preview" className="rounded-xl" />
 
       {/* Palette & Picker Content*/}
       <div className="flex justify-center items-center gap-20 flex-wrap">

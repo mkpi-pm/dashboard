@@ -32,7 +32,7 @@ const Orders = () => (
       </ColumnsDirective>
 
       {/* Functionality */}
-      <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit ]} />
+      <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit]} />
 
     </GridComponent>
       

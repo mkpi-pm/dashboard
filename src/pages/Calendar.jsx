@@ -17,6 +17,8 @@ const Calendar = () => (
       height="650px"
       eventSettings={{ dataSource: scheduleData }}
       selectedDate= {new Date(2021, 0, 10)}
+      currentView="Week"
+      // style={{ background: "white", opacity: "0.8" }}
     >
       {/* Functionality */}
       <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]} />
