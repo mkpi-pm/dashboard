@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
 
+//  Context created and initialized
 const StateContext = createContext();
 
-// Navbar initial state
+// Button initial state
 const initialState = {
   chat: false,
   cart: false,
@@ -11,6 +12,7 @@ const initialState = {
 };
 
 export const ContextProvider = ({ children }) => {
+  // State values
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
@@ -34,7 +36,9 @@ export const ContextProvider = ({ children }) => {
   };
 
   return (
+    // Wrapping child components with provider of context to pass all values
     <StateContext.Provider
+      // values passed down
       value={{
         activeMenu,
         setActiveMenu,
@@ -54,6 +58,7 @@ export const ContextProvider = ({ children }) => {
         initialState,
       }}
     >
+      {/* components using passed values */}
       {children}
     </StateContext.Provider>
   );
