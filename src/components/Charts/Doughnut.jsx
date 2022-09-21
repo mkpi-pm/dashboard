@@ -12,7 +12,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
       id={id}
       legendSettings={{ visible: legendVisiblity, background: "white" }}
       height={height}
-      background={currentMode === "Dark" ? "#33373E" : "#fff"}
+      background={ currentMode === "Dark" ? "#2E4485" : "#fff" }
       tooltip={{ enable: true }}
     >
       {/* Functionality */}

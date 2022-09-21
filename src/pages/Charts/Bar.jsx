@@ -23,9 +23,9 @@ const Bar = () => {
           id="charts"
           primaryXAxis={barPrimaryXAxis}
           primaryYAxis={barPrimaryYAxis}
-          chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2 }}
+          chartArea={{ border: { width: 0 } }}
           tooltip={{ enable: true }}
-          background={ currentMode === "Dark" ? "#33373E" : "#fff"}
+          background={ currentMode === "Dark" ? "#2E4485" : "#fff"}
           legendSettings={{ background: "white", opacity: 0.5 }}
         >
           {/* Functionality */}

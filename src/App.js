@@ -65,18 +65,17 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
-
-          {/* Sidebar */}
+          {/* Sidebar dark:bg-secondary-dark-bg */}
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+            <div className="w-72 fixed sidebar dark:bg-[#0e1740] bg-white">
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg">
+            <div className="w-0 dark:bg-[#0e1740]">
               <Sidebar />
             </div>
           )}
-
+          0e1740
           {/* Full Page - Sidebar = Navbar.width */}
           <div
             className={`dark:bg-main-dark-bg  bg-main-bg min-h-screen w-full ${

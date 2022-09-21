@@ -33,7 +33,7 @@ const Pie = () => {
           enableRotation={true}
           center={{ x: "50%", y: "50%" }}
           tooltip={{ enable: true }}
-          background={ currentMode === "Dark" ? "#33373E" : "#fff"}
+          background={ currentMode === "Dark" ? "#2E4485" : "#fff"}
         >
           {/* Functionality */}
           <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />

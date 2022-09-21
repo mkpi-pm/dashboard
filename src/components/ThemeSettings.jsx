@@ -14,7 +14,7 @@ const ThemeSettings = () => {
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
 
       {/* settings card */}
-      <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400">
+      <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#0e1740] w-400">
 
         {/* settings title */}
         <div className="flex justify-between items-center p-4 ml-4">
@@ -77,7 +77,7 @@ const ThemeSettings = () => {
               htmlFor="dark"
               className="ml-2 text-md cursor-poointer"
             >
-              Dark
+              Blue
             </label>
 
           </div>

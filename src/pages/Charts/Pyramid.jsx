@@ -26,8 +26,7 @@ const Pyramid = () => {
             opacity: 0.5,
             position: "Bottom" }}
           tooltip={{ enable: true }}
-          background={currentMode === "Dark" ? "#33373E" : "#fff"}
-          chartArea={{ background: "white", opacity: 0.2 }}
+          background={currentMode === "Dark" ? "#2E4485" : "#fff"}
         >
           {/* Functionality */}
           <Inject services={[AccumulationDataLabel, AccumulationTooltip, PyramidSeries, AccumulationLegend, AccumulationSelection]}/>

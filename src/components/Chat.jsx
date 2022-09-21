@@ -9,8 +9,8 @@ const Chat = () => {
   const { currentColor } = useStateContext();
 
   return (
-    // Chat Card
-    <div className="nav-item absolute right-5 md:right-52 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
+    // Chat Card #42464D
+    <div className="nav-item absolute right-5 md:right-52 top-16 bg-white dark:bg-[#0e1740] p-8 rounded-lg w-96">
 
       {/* Header */}
       <div className="flex justify-between items-center">

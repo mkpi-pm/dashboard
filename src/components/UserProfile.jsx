@@ -10,8 +10,8 @@ const UserProfile = () => {
   const { currentColor } = useStateContext();
 
   return (
-    // User Profile Card
-    <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
+    // User Profile Card #42464D
+    <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#0e1740] p-8 rounded-lg w-96">
 
       {/* User Profile Headline */}
       <div className="flex justify-between items-center">

@@ -12,10 +12,13 @@ module.exports = {
       },
       backgroundColor: {
         "main-bg": "#FAFBFB",
-        "main-dark-bg": "#20232A",
-        "secondary-dark-bg": "#33373E",
-        "light-gray": "#F7F7F7",
+        "main-dark-bg": "#0E1849", // #20232A
+        "secondary-dark-bg": "#2E4485", // #33373E
+        "light-gray": "#7397BE", // #F7F7F7
         "half-transparent": "rgba(0, 0, 0, 0.5)",
+        "main-dark-blue-bg": "#0E1849", // #0e1740 #132565 #0f1b4b #0a1334 #5a6794
+        "secondary-dark-blue-bg": "#2E4485",
+        "light-blue": "#7397BE",
       },
       borderWidth: {
         1: "1px",

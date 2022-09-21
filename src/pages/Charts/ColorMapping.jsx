@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Tooltip, Legend, RangeColorSettingsDirective, RangeColorSettingDirective } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Tooltip, Legend, DataLabel, RangeColorSettingsDirective, RangeColorSettingDirective } from "@syncfusion/ej2-react-charts";
 
 import { colorMappingData, rangeColorMapping, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis } from "../../data/dummy";
 import { useStateContext } from "../../contexts/ContextProvider";
@@ -23,13 +23,13 @@ const ColorMapping = () => {
           id="charts"
           primaryXAxis={ColorMappingPrimaryXAxis}
           primaryYAxis={ColorMappingPrimaryYAxis}
-          chartArea={{ border: { width: 0 }, background: "white", opacity: 0.2 }}
-          background={currentMode === "Dark" ? "#33373E" : "#fff"}
+          chartArea={{ border: { width: 0 } }}
+          background={ currentMode === "Dark" ? "#2E4485" : "#fff"}
           legendSettings={{ mode: "Range", background: "white", opacity: 0.5 }}
           tooltip={{ enable: true }}
         >
           {/* Functionality */}
-          <Inject services={[ColumnSeries, Tooltip, Category, Legend]}/> 
+          <Inject services={[ColumnSeries, Tooltip, Category, Legend, DataLabel]}/> 
 
           {/* Data */}
           <SeriesCollectionDirective>
@@ -41,9 +41,8 @@ const ColorMapping = () => {
               yName="y"
               type="Column"
               animation={{ enable: true }}
-              cornerRadius={{
-                topLeft: 10,
-                topRight: 10 }}
+              cornerRadius={{ topLeft: 10, topRight: 10 }}
+              marker={{ dataLabel: { visible: true, position: "Outer" } }}
             >
             </SeriesDirective>
 
