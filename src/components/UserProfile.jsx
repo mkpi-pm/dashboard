@@ -31,7 +31,7 @@ const UserProfile = () => {
       </div>
 
       {/* User Data */}
-      <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6">
+      <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6 hover:bg-light-gray">
 
         {/* User Image */}
         <img
@@ -42,7 +42,7 @@ const UserProfile = () => {
 
         <div>
           {/* User Info */}
-          <p className="font-semibold text-xl dark:text-gray-200"> Peter Roberts </p>
+          <p className="font-semibold text-xl dark:text-gray-400"> Peter Roberts </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">  Administrator   </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> info@sdg.com </p>
         </div>
@@ -54,14 +54,14 @@ const UserProfile = () => {
         {/* List */}
         {userProfileData.map((item, index) => (
 
-          // Single data card
-          <div key={index} className="flex gap-5 border-b-1 border-color p-4 hover:bg-light-gray cursor-pointer  dark:hover:bg-[#42464D]">
+          // Single data card #42464D
+          <div key={index} className="flex gap-5 border-b-1 border-color p-4 hover:bg-light-gray cursor-pointer  dark:hover:bg-[#ffffff]">
 
             {/* Icon & props*/}
             <button
               type="button"
               style={{ color: item.iconColor, backgroundColor: item.iconBg }}
-              className="text-xl rounded-lg p-3 hover:bg-light-gray"
+              className="text-xl rounded-lg p-3"
             >
               {item.icon}
             </button>
@@ -69,10 +69,10 @@ const UserProfile = () => {
             {/* Title & Description */}
             <div>
               {/* Title */}
-              <p className="font-semibold dark:text-gray-200 ">{item.title}</p>
+              <p className="font-semibold dark:text-gray-400 ">{item.title}</p>
 
               {/* Description */}
-              <p className="text-gray-500 text-sm dark:text-gray-400"> {item.desc} </p>
+              <p className="text-gray-500 text-sm dark:text-gray-500"> {item.desc} </p>
             </div>
 
           </div>
