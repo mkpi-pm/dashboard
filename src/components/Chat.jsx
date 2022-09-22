@@ -22,9 +22,9 @@ const Chat = () => {
           <p className="font-semibold text-lg dark:text-gray-200">Messages</p>
 
           {/* button */}
-          <button type="button" className="text-white text-xs rounded p-1 px-2 bg-orange">
-            5 New
-          </button>
+          <button
+            type="button"
+            className="text-white text-xs rounded-full p-1 px-2 bg-yellow-400"> 4 New</button>
 
         </div>
 
@@ -46,7 +46,7 @@ const Chat = () => {
         {chatData?.map((item, index) => (
 
           // Message Card
-          <div key={index} className="flex items-center gap-5 border-b-1 border-color p-3 leading-8 cursor-pointer">
+          <div key={index} className="flex items-center gap-5 border-b-1 border-color p-3 leading-8 hover:bg-light-gray cursor-pointer">
 
             {/* Image & dotColor */}
             <div className="relative">
@@ -61,7 +61,7 @@ const Chat = () => {
               {/* dotColor */}
               <span
                 style={{ background: item.dotColor }}
-                className="absolute inline-flex rounded-full h-2 w-2 right-0 -top-1"
+                className="absolute inline-flex rounded-full h-2 w-2 right-0 top-1"
                />
 
             </div>
@@ -70,13 +70,13 @@ const Chat = () => {
             <div>
 
               {/* message */}
-              <p className="font-semibold dark:text-gray-200 ">{item.message}</p>
+              <p className="font-semibold dark:text-gray-400 ">{item.message}</p>
 
               {/* description */}
-              <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
+              <p className="text-gray-500 text-sm">{item.desc}</p>
 
               {/* time */}
-              <p className="text-gray-500 dark:text-gray-400 text-xs">{item.time}</p>
+              <p className="text-gray-500 text-xs">{item.time}</p>
 
             </div>
 
