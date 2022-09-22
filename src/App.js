@@ -59,7 +59,7 @@ const App = () => {
                 type="button"
                 onClick={() => setThemeSettings(true)}
                 style={{ background: currentColor, borderRadius: "50%" }}
-                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray "
+                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings />
               </button>
@@ -75,7 +75,7 @@ const App = () => {
               <Sidebar />
             </div>
           )}
-          0e1740
+
           {/* Full Page - Sidebar = Navbar.width */}
           <div
             className={`dark:bg-main-dark-bg  bg-main-bg min-h-screen w-full ${
