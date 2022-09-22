@@ -10,7 +10,7 @@ const Ecommerce = () => {
 
   return (
     // CardBlank
-    <div className="mt-24">
+    <div className="mt-8">
       
       {/* Earnings Block */}
       <div className="flex flex-wrap lg:flex-nowrap justify-center">

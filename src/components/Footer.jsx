@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-12">
       <p className="dark:text-gray-200 text-gray-700 text-center ml-20">
         Copyright © 2022 SoliDeoGloria Inc. All Rights Reserved.
       </p>

@@ -55,7 +55,7 @@ const ThemeSettings = () => {
               htmlFor="light"
               className="ml-2 text-md cursor-poointer"
             >
-              Light
+              White
             </label>
 
           </div>
