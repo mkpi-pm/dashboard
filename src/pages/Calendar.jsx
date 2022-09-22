@@ -17,7 +17,7 @@ const Calendar = () => (
       height="650px"
       eventSettings={{ dataSource: scheduleData }}
       selectedDate= {new Date(2021, 0, 10)}
-      currentView="Week"
+      currentView="WorkWeek"
       // style={{ background: "white", opacity: "0.8" }}
     >
       {/* Functionality */}
