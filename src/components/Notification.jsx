@@ -24,7 +24,7 @@ const Notification = () => {
           {/* button */}
           <button
             type="button"
-            className="text-white text-xs rounded p-1 px-2 bg-orange-theme "> 5 New</button>
+            className="text-white text-xs rounded-full p-1 px-2 bg-green-500"> 4 Old</button>
 
         </div>
 
@@ -34,7 +34,8 @@ const Notification = () => {
           color="rgb(153, 171, 180)"
           bgHoverColor="light-gray"
           size="2xl"
-          borderRadius="50%" />
+          borderRadius="50%"
+         />
 
       </div>
 
@@ -45,7 +46,7 @@ const Notification = () => {
         {chatData?.map((item, index) => (
 
           // Message Card
-          <div key={index} className="flex items-center leading-8 gap-5 border-b-1 border-color p-3">
+          <div key={index} className="flex items-center leading-8 gap-5 border-b-1 border-color p-3 hover:bg-light-gray cursor-pointer">
 
             {/* Image */}
             <img
@@ -58,12 +59,12 @@ const Notification = () => {
             <div>
 
               {/* Notifications */}
-              <p className="font-semibold dark:text-gray-200">
+              <p className="font-semibold text-gray-400">
                 {item.message}
               </p>
 
               {/* Description */}
-              <p className="text-gray-500 text-sm dark:text-gray-400">
+              <p className="text-gray-500 text-sm">
                 {item.desc}
               </p>
 
