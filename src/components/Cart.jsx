@@ -42,7 +42,7 @@ const Cart = () => {
             <div>
 
               {/* Cart Item Info Card*/}
-              <div className="flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4 hover:bg-light-gray cursor-pointer">
+              <div className="flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4 hover:bg-light-gray cursor-pointer text-gray-600 dark:text-gray-400">
 
                 {/* Item Image */}
                 <img className="rounded-lg h-80 w-24" src={item.image} alt="" />
@@ -51,16 +51,16 @@ const Cart = () => {
                 <div>
 
                   {/* Item Name */}
-                  <p className="font-semibold ">{item.name}</p>
+                  <p className="font-bold">{item.name}</p>
 
                   {/* Item Category */}
-                  <p className="text-gray-600 dark:text-gray-400 text-sm font-semibold">{item.category}</p>
+                  <p className="text-sm font-semibold">{item.category}</p>
 
                   {/* Price & Quantity Card */}
                   <div className="flex gap-4 mt-2 items-center">
 
                     {/* Item Price */}
-                    <p className="font-semibold text-lg">{item.price}</p>
+                    <p className="font-semibold text-md">{item.price}</p>
 
                     {/* Item Quantity */}
                     <div className="flex items-center border-1 border-r-0 border-color rounded">
@@ -69,7 +69,7 @@ const Cart = () => {
                       <p className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600 "><AiOutlineMinus /></p>
 
                       {/* Item Quantity Number */}
-                      <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">0</p>
+                      <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">1</p>
 
                       {/* Item Plus Component */}
                       <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600"><AiOutlinePlus /></p>
