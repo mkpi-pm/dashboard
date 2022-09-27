@@ -1,7 +1,7 @@
 import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Stacked, Doughnut, Button, SparkLine, LineChart } from "../components";
+import { Stacked, Doughnut, Button, SparkLine } from "../components";
 import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -17,7 +17,7 @@ const Ecommerce = () => {
 
         {/* Earnings Content */}
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg
-                       h-44 rounded-xl w-full lg:w-80 p-8 pl-4 pt-4 m-3 bg-hero-pattern
+                       h-44 rounded-2xl w-full lg:w-72 p-8 pl-4 pt-4 m-3 bg-hero-pattern
                        bg-no-repeat bg-cover bg-center"
         >
 
