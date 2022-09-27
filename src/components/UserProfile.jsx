@@ -31,7 +31,7 @@ const UserProfile = () => {
       </div>
 
       {/* User Data */}
-      <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6 hover:bg-light-gray">
+      <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-3 hover:bg-light-gray">
 
         {/* User Image */}
         <img
@@ -61,7 +61,7 @@ const UserProfile = () => {
             <button
               type="button"
               style={{ color: item.iconColor, backgroundColor: item.iconBg }}
-              className="text-xl rounded-lg p-3"
+              className="text-xl rounded-lg p-3 ml-4"
             >
               {item.icon}
             </button>
