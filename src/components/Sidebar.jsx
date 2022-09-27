@@ -50,6 +50,7 @@ const Sidebar = () => {
               {/* button */}
               <button
                 type="button"
+                style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
                 onClick={() => setActiveMenu(!activeMenu)}
                 className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
               >
