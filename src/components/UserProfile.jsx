@@ -35,7 +35,7 @@ const UserProfile = () => {
 
         {/* User Image */}
         <img
-          className="rounded-full h-24 w-24"
+          className="rounded-full h-24 w-24 mt-3 ml-3"
           src={avatar}
           alt="user-profile"
         />
