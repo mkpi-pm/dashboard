@@ -11,7 +11,7 @@ const ThemeSettings = () => {
 
   return (
     // settings shadow
-    <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
+    <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 bottom-0 left-0">
 
       {/* settings card */}
       <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#0e1740] w-400">
