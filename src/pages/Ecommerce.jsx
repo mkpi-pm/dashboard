@@ -43,7 +43,7 @@ const Ecommerce = () => {
         </div>
 
         {/* Customers Products Sales Refunds */}
-        <div className="flex m-3 flex-wrap lg:flex-nowrap justify-center gap-1 items-center">
+        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           
           {/* content */}
           {earningData.map((item) => (
